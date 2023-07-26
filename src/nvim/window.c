@@ -1060,6 +1060,10 @@ static int check_split_disallowed(void)
     emsg(_(e_cannot_split_window_when_closing_buffer));
     return FAIL;
   }
+  if (curwin->w_floating) {
+    emsg(_("EXXX: Can't split a floating window"));
+    return FAIL;
+  }
   return OK;
 }
 
