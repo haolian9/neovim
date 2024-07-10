@@ -4238,6 +4238,7 @@ M.funcs = {
     signature = 'getmatches([{win}])',
   },
   getmousepos = {
+    args = {0, 2},
     desc = [=[
       Returns a |Dictionary| with the last known position of the
       mouse.  This can be used in a mapping for a mouse click.  The
@@ -4270,8 +4271,8 @@ M.funcs = {
       |v:mouse_col| and |v:mouse_winid| also provide these values.
     ]=],
     name = 'getmousepos',
-    params = {},
-    signature = 'getmousepos()',
+    params = {{'row', 'integer'}, {'col', 'integer'}},
+    signature = 'getmousepos([{row}, {col}])',
     returns = 'vim.fn.getmousepos.ret',
   },
   getpid = {
