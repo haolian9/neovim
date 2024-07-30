@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include <uv.h>
 
 #include "klib/kvec.h"
@@ -1007,6 +1008,7 @@ static void add_msg_hist_multiattr(const char *s, int len, int attr, bool multil
   p->multiline = multiline;
   p->multiattr = multiattr;
   p->kind = msg_ext_kind;
+  p->time = time(NULL);
   if (last_msg_hist != NULL) {
     last_msg_hist->next = p;
   }
