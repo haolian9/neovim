@@ -17,6 +17,7 @@ typedef struct msg_hist {
   char *msg;              ///< Message text.
   const char *kind;       ///< Message kind (for msg_ext)
   int attr;               ///< Message highlighting.
+  time_t time;            ///< message occurred time
   bool multiline;         ///< Multiline message.
   HlMessage multiattr;    ///< multiattr message.
 } MessageHistoryEntry;
