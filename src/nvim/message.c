@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include <uv.h>
 
 #include "klib/kvec.h"
@@ -1043,6 +1044,7 @@ static void msg_hist_add_multihl(HlMessage msg, bool temp)
   entry->msg = msg;
   entry->temp = temp;
   entry->kind = msg_ext_kind;
+  entry->time = time(NULL);
   entry->prev = msg_hist_last;
   entry->next = NULL;
 

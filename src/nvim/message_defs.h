@@ -15,6 +15,7 @@ typedef kvec_t(HlMessageChunk) HlMessage;
 typedef struct msg_hist {
   struct msg_hist *next;  ///< Next message.
   struct msg_hist *prev;  ///< Previous message.
+  time_t time;            ///< message occurred time
   HlMessage msg;          ///< Highlighted message.
   const char *kind;       ///< Message kind (for msg_ext)
   bool temp;              ///< Temporary message since last command ("g<")
