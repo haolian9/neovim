@@ -1595,7 +1595,7 @@ void win_init(win_T *newp, win_T *oldp, int flags)
   newp->w_fraction = oldp->w_fraction;
   newp->w_prev_fraction_row = oldp->w_prev_fraction_row;
   copy_jumplist(oldp, newp);
-  if (flags & WSP_NEWLOC) {
+  if (true || flags & WSP_NEWLOC) {
     // Don't copy the location list.
     newp->w_llist = NULL;
     newp->w_llist_ref = NULL;
